@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Asesmen Digital: Teks Nonfiksi Ulos (Kelas IV)</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700&family=Nunito:wght@400;700&display=swap">
+<style>
+:root{--bg:#f7f5f4;--card:#fff;--ink:#241a17;--mut:#6b5b55;--red:#a3171f;--line:#e4d9d0;--ok:#1e7a46;--okbg:#e6f4ea;--no:#b3261e;--nobg:#fdecea;--gold:#fff4d6;--goldb:#d9a21b;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17100f;--card:#231918;--ink:#f3e9e4;--mut:#bfaea6;--red:#c93a42;--line:#3a2a27;--ok:#6fd49a;--okbg:#143222;--no:#ff8a80;--nobg:#3a1715;--gold:#3a2d0e;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#17100f;--card:#231918;--ink:#f3e9e4;--mut:#bfaea6;--red:#c93a42;--line:#3a2a27;--ok:#6fd49a;--okbg:#143222;--no:#ff8a80;--nobg:#3a1715;--gold:#3a2d0e;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Nunito,system-ui,sans-serif}
+.ulos{height:14px;background:repeating-linear-gradient(90deg,#a3171f 0 28px,#1c1614 28px 36px,#f5efe6 36px 44px,#a3171f 44px 72px,#d9a21b 72px 76px)}
+main{max-width:720px;margin:0 auto;padding:20px 16px 48px}
+h1,h2{font-family:"Baloo 2",Nunito,sans-serif;line-height:1.2;margin:.2em 0 .4em}
+h1{font-size:2rem}h2{font-size:1.4rem}
+p{margin:.5em 0}
+.mut{color:var(--mut);font-size:.95rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;margin:14px 0}
+.track{height:12px;border-radius:6px;background:var(--line);overflow:hidden;margin:6px 0 14px}
+.track i{display:block;height:100%;transition:width .3s;background:repeating-linear-gradient(90deg,#a3171f 0 28px,#1c1614 28px 36px,#f5efe6 36px 44px,#a3171f 44px 72px,#d9a21b 72px 76px)}
+details.teks{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 18px}
+details.teks summary{cursor:pointer;font-weight:700;padding:6px 0}
+.par{display:flex;gap:10px}.par b{flex:none;width:1.6em;height:1.6em;border-radius:50%;background:var(--red);color:#fff;font-size:.8rem;display:grid;place-items:center;margin-top:.45em}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:12px;border:2px solid var(--line);border-radius:10px;margin:8px 0;cursor:pointer}
+.opt:has(input:checked){border-color:var(--red)}
+.opt input{margin-top:.4em;accent-color:var(--red)}
+input[type=text],textarea{width:100%;font:inherit;padding:12px;border:2px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink)}
+textarea{min-height:130px}
+button{font:700 1rem Nunito,sans-serif;padding:12px 20px;border-radius:10px;border:2px solid var(--red);cursor:pointer;margin:6px 8px 0 0;min-height:46px}
+.pri{background:var(--red);color:#fff}.sec{background:transparent;color:var(--ink)}
+button:disabled{opacity:.45;cursor:not-allowed}
+:focus-visible{outline:3px solid var(--goldb);outline-offset:2px}
+.fb{padding:12px 14px;border-radius:10px;margin:12px 0;border-left:6px solid}
+.fb.ok{background:var(--okbg);border-color:var(--ok)}.fb.no{background:var(--nobg);border-color:var(--no)}.fb.in{background:var(--gold);border-color:var(--goldb)}
+.big{font:700 3.2rem "Baloo 2",sans-serif;line-height:1}
+table{width:100%;border-collapse:collapse;font-size:.95rem}td,th{border-bottom:1px solid var(--line);padding:6px 4px;text-align:left}
+@media (prefers-reduced-motion:reduce){.track i{transition:none}}
+</style>
+</head>
+<body>
+<div class="ulos" aria-hidden="true"></div>
+<main id="app"></main>
+<script>
+var PAR=[
+"Pernahkah kamu melihat kain bergaris-garis berwarna merah, hitam, dan putih yang dikenakan pada acara adat? Kain itu bernama ulos. Ulos adalah kain tenun tradisional suku Batak di Sumatera Utara. Selain suku Batak, masyarakat lain di Sumatera Utara juga memiliki kain tradisional, misalnya uis pada masyarakat Karo, hiou pada masyarakat Simalungun, abit godang pada masyarakat Mandailing, dan songket pada masyarakat Melayu.",
+"Ulos dibuat dengan cara ditenun. Benang disusun dan dianyam satu per satu menggunakan alat tenun tradisional. Pembuatannya membutuhkan waktu yang lama, kesabaran, dan ketelitian. Karena itu, ulos sangat berharga.",
+"Ulos bukan sekadar kain penghangat badan. Dalam adat Batak, ulos diberikan kepada orang lain sebagai tanda kasih sayang, doa, dan restu. Kegiatan ini disebut mangulosi. Ulos digunakan dalam berbagai upacara adat, seperti pernikahan dan kelahiran bayi.",
+"Ulos memiliki banyak jenis, dan setiap jenis memiliki nama, motif, serta makna yang berbeda. Misalnya, ulos ragidup melambangkan kehidupan, sedangkan ulos sadum yang berwarna cerah melambangkan suka cita. Ulos mangiring melambangkan harapan agar kebaikan selalu mengiringi kehidupan anak-anak.",
+"Sayangnya, kini semakin sedikit anak muda yang mengenal dan mau mengenakan kain tradisional. Banyak orang juga memilih kain buatan pabrik yang harganya lebih murah, sehingga para penenun kehilangan pembeli dan penghasilan. Jika hal ini terus terjadi, pengetahuan tentang cara menenun, motif, dan makna kain dapat hilang. Akibatnya, warisan budaya kita bisa punah.",
+"Kita dapat melestarikan kain tradisional dengan mengenakannya pada acara-acara tertentu, mempelajari maknanya dari orang tua dan kakek-nenek, membeli kain tenun asli buatan pengrajin, serta menceritakannya kepada teman. Dengan begitu, budaya Sumatera Utara akan tetap lestari. Mari bangga dengan budaya kita!"];
+
+var Q=[
+{t:"pg",b:"A. Pilihan ganda",p:"Berdasarkan teks, apa yang dimaksud dengan ulos?",o:["Alat musik tradisional suku Batak.","Kain tenun tradisional suku Batak.","Makanan khas pada acara adat.","Rumah adat suku Batak."],k:1,pts:1,par:1,ok:"Tepat! Paragraf 1 menyebut ulos sebagai kain tenun tradisional suku Batak.",no:"Belum tepat. Baca lagi kalimat ketiga paragraf 1. Ulos itu benda apa, dan milik suku apa?"},
+{t:"pg",b:"A. Pilihan ganda",p:"Apa yang dapat terjadi jika kain tradisional tidak dilestarikan?",o:["Kain tradisional menjadi semakin banyak dibuat.","Semua orang menjadi pandai menenun.","Pengetahuan tentang menenun, motif, dan makna kain dapat hilang.","Budaya daerah menjadi semakin terkenal."],k:2,pts:1,par:5,ok:"Hebat! Kamu menemukan akibatnya di paragraf 5.",no:"Belum tepat. Cari kata “Akibatnya” di paragraf 5. Apa yang dapat hilang jika kain tidak dijaga?"},
+{t:"pg",b:"A. Pilihan ganda",p:"Tindakan yang tepat untuk melestarikan kain tradisional berdasarkan teks adalah ....",o:["Menyimpan kain tradisional dan tidak pernah memakainya.","Tidak mau mempelajari makna kain tradisional.","Mengenakannya pada acara tertentu dan mempelajari maknanya.","Hanya membeli kain buatan pabrik yang murah."],k:2,pts:1,par:6,ok:"Benar! Mengenakan kain dan mempelajari maknanya disebutkan di paragraf 6.",no:"Belum tepat. Baca paragraf 6. Cara mana yang membuat kain tetap dikenal dan dipakai?"},
+{t:"pg",b:"A. Pilihan ganda",p:"Dalam teks, mangulosi berarti ....",o:["menenun kain dengan alat tenun.","menjual ulos kepada pembeli.","memberikan ulos sebagai tanda kasih sayang, doa, dan restu.","menyimpan ulos di dalam lemari."],k:2,pts:1,par:3,ok:"Tepat! Mangulosi adalah memberikan ulos sebagai tanda kasih sayang, doa, dan restu.",no:"Belum tepat. Lihat paragraf 3. Apa arti kegiatan yang disebut mangulosi?"},
+{t:"pg",b:"A. Pilihan ganda",p:"Mengapa para penenun tradisional kehilangan penghasilan?",o:["Karena ulos tidak boleh dijual.","Karena banyak orang memilih kain buatan pabrik yang lebih murah.","Karena menenun sangat mudah dan cepat.","Karena semua orang sudah memiliki ulos."],k:1,pts:1,par:5,ok:"Bagus! Kamu memahami hubungan sebab-akibatnya.",no:"Belum tepat. Baca kalimat kedua paragraf 5. Orang memilih kain apa, sehingga penenun kehilangan siapa?"},
+{t:"isi",b:"B. Isian",p:"Jika kain tradisional tidak dilestarikan, pengetahuan tentang menenun, motif, dan makna kain dapat ....",re:/hilang|punah|lenyap|tidak ada lagi/i,pts:2,par:5,ok:"Benar! Jawabannya “hilang” atau “punah”, ada di paragraf 5.",no:"Belum tepat. Baca kata “Akibatnya” di paragraf 5. Apa yang terjadi pada pengetahuan menenun?"},
+{t:"isi",b:"B. Isian",p:"Kain tradisional yang dimiliki masyarakat Karo disebut ....",re:/\buis\b/i,pts:2,par:1,ok:"Benar! Kain tradisional Karo adalah uis (paragraf 1).",no:"Belum tepat. Cari nama kain masyarakat Karo di paragraf 1."},
+{t:"isi",b:"B. Isian",p:"Tuliskan satu cara melestarikan kain tradisional berdasarkan informasi dalam teks!",re:/kenak|memakai|pakai|mempelajari|belajar|membeli|beli|menceritakan|bercerita/i,pts:2,par:6,ok:"Bagus! Cara yang kamu tulis sesuai dengan paragraf 6.",no:"Belum tepat. Baca paragraf 6. Ada empat cara melestarikan kain tradisional, tulis salah satunya."},
+{t:"ur",b:"C. Uraian",p:"Jelaskan dengan bahasamu sendiri makna ulos dan apa yang dapat terjadi jika kain tradisional tidak dilestarikan!",par:3,cr:["Aku menjelaskan makna ulos: kain tenun Batak yang diberikan sebagai kasih sayang, doa, dan restu.","Aku menjelaskan akibat jika tidak dilestarikan: pengetahuan menenun, motif, dan makna bisa hilang atau warisan budaya punah.","Aku menulis dengan kalimat lengkap.","Aku memakai kata-kataku sendiri, tidak menyalin teks."]},
+{t:"ur",b:"C. Uraian",p:"Tuliskan kesimpulan isi teks “Ulos dan Kain Tradisional Sumatera Utara: Warisan Budaya yang Harus Kita Jaga” dengan bahasamu sendiri!",par:6,cr:["Aku menyebut bahwa Sumatera Utara punya banyak kain tradisional dan ulos punya makna penting.","Aku menyebut akibat jika kain dan pengetahuannya tidak dijaga.","Aku menulis ajakan untuk melestarikannya.","Aku menulis runut dengan kata-kataku sendiri."]}
+];
+var BT={4:["⭐ Jawabanmu lengkap dan memakai bahasamu sendiri.","🪜 Coba tambahkan satu contoh kain dari daerah temanmu."],3:["⭐ Poin pentingmu sudah ada.","🪜 Beberapa bagian masih mirip teks; ceritakan dengan kata-katamu."],2:["⭐ Kamu sudah menulis satu poin yang tepat.","🪜 Lengkapi dengan poin yang belum kamu tulis pada daftar di atas."],1:["⭐ Terima kasih sudah berusaha.","🪜 Baca paragraf yang ditunjuk bersama gurumu, lalu tulis ulang."],0:["⭐ Terima kasih sudah berusaha.","🪜 Baca paragraf yang ditunjuk bersama gurumu, lalu tulis ulang."]};
+var $=function(s){return document.querySelector(s)},app=$("#app");
+var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})};
+var S={nama:"",kelas:"",i:0,rec:Q.map(function(){return{a:0,first:0,fin:0,done:0,txt:""}}),ref:{}};
+var TEKS='<details class="teks"><summary>Baca teks lagi</summary>'+PAR.map(function(t,i){return'<div class="par"><b>'+(i+1)+'</b><p>'+t+'</p></div>'}).join("")+'</details>';
+
+function intro(){
+app.innerHTML='<h1>Asesmen Digital: Ulos dan Kain Tradisional Sumatera Utara</h1><p class="mut">Bahasa Indonesia, Kelas IV / Fase B. 10 soal, lalu refleksi belajar.</p><div class="card"><h2>Sebelum mulai</h2><p>1. Bacalah teks dengan teliti. Nomor di samping paragraf membantumu menemukan jawaban.</p><p>2. Setiap soal langsung memberi umpan balik. Jika jawabanmu belum tepat, baca petunjuknya lalu coba lagi.</p><p>3. Kerjakan sendiri. Untuk uraian, gunakan bahasamu sendiri.</p></div><div class="card"><label for="nm"><b>Namamu</b></label><input type="text" id="nm" autocomplete="off"><p></p><label for="kl"><b>Kelas</b></label><input type="text" id="kl" autocomplete="off" value="IV"><p></p><button class="pri" id="go" disabled>Mulai mengerjakan</button></div><h2>Teks bacaan</h2><div class="card">'+PAR.map(function(t,i){return'<div class="par"><b>'+(i+1)+'</b><p>'+t+'</p></div>'}).join("")+'</div>';
+$("#nm").addEventListener("input",function(e){$("#go").disabled=!e.target.value.trim()});
+$("#go").onclick=function(){S.nama=$("#nm").value.trim();S.kelas=$("#kl").value.trim();S.i=0;soal()};
+}
+
+function bar(n){return'<div class="track" role="progressbar" aria-valuemin="0" aria-valuemax="11" aria-valuenow="'+n+'"><i style="width:'+(n/11*100)+'%"></i></div>'}
+
+function soal(){
+var x=Q[S.i],r=S.rec[S.i],h=bar(S.i)+TEKS+'<section class="card"><p class="mut"><b>'+x.b+'</b>. Soal '+(S.i+1)+' dari 10 (bernilai '+(x.t=="ur"?4:x.pts)+' poin)</p><h2>'+x.p+'</h2>';
+if(x.t=="pg")h+=x.o.map(function(o,i){return'<label class="opt"><input type="radio" name="o" value="'+i+'"><span>'+o+'</span></label>'}).join("");
+else if(x.t=="isi")h+='<input type="text" id="ans" autocomplete="off" aria-label="Jawabanmu">';
+else h+='<textarea id="ans" aria-label="Jawabanmu"></textarea><div id="cl"></div>';
+h+='<div id="fb" aria-live="polite"></div><div><button class="pri" id="chk" disabled>'+(x.t=="ur"?"Cek jawabanku":"Periksa jawaban")+'</button><button class="sec" id="nx" disabled>'+(S.i==9?"Lanjut ke refleksi":"Soal berikutnya")+'</button></div></section>';
+app.innerHTML=h;window.scrollTo(0,0);r.a=0;r.done=0;
+var ready=function(){var v=x.t=="pg"?document.querySelector("input[name=o]:checked"):$("#ans").value.trim();$("#chk").disabled=!v};
+document.querySelectorAll("input[name=o],#ans").forEach(function(e){e.addEventListener("input",ready);e.addEventListener("change",ready)});
+$("#nx").onclick=function(){S.i<9?(S.i++,soal()):refleksi()};
+$("#chk").onclick=function(){x.t=="ur"?cekUr(x,r):cek(x,r)};
+}
+
+function cek(x,r){
+var v=x.t=="pg"?+document.querySelector("input[name=o]:checked").value:$("#ans").value.trim(),good=x.t=="pg"?v===x.k:x.re.test(v);
+r.a++;r.txt=x.t=="pg"?x.o[v]:v;
+if(good){r.fin=x.pts;if(r.a==1)r.first=x.pts;$("#fb").innerHTML='<div class="fb ok">'+x.ok+(r.a>1?" Kamu berhasil memperbaiki jawabanmu!":"")+'</div>';
+document.querySelectorAll("input").forEach(function(e){e.disabled=true});$("#chk").disabled=true;}
+else{if(r.a==1)r.first=0;$("#fb").innerHTML='<div class="fb no">'+x.no+'</div>';$("#chk").textContent="Coba lagi";}
+r.done=1;$("#nx").disabled=false;
+}
+
+function cekUr(x,r){
+r.txt=$("#ans").value.trim();$("#ans").disabled=true;$("#chk").disabled=true;r.done=1;$("#nx").disabled=false;
+$("#cl").innerHTML='<div class="fb in"><b>Cek dirimu sendiri.</b> Centang yang sudah kamu lakukan. Gurumu akan memeriksa ulang jawabanmu.'+x.cr.map(function(c,i){return'<label class="opt"><input type="checkbox" data-i="'+i+'"><span>'+c+'</span></label>'}).join("")+'</div>';
+var upd=function(){var n=document.querySelectorAll("#cl input:checked").length;r.first=r.fin=n;var b=BT[n];$("#fb").innerHTML='<div class="fb in">'+b[0]+"<br>"+b[1]+(n<4?" (Petunjuk: lihat paragraf "+x.par+".)":"")+'</div>'};
+document.querySelectorAll("#cl input").forEach(function(e){e.addEventListener("change",upd)});upd();
+}
+
+function refleksi(){
+app.innerHTML=bar(10)+'<h1>Refleksi belajar</h1><p class="mut">Bagian ini tidak dinilai. Jawablah dengan jujur supaya gurumu tahu cara membantumu belajar.</p><section class="card"><p><b>1. Seberapa paham kamu isi teks tentang ulos?</b></p>'+["😀 Sangat paham","🙂 Cukup paham","😐 Masih bingung"].map(function(o){return'<label class="opt"><input type="radio" name="r1" value="'+o+'"><span>'+o+'</span></label>'}).join("")+'<p><b>2. Cara apa yang paling membantumu menemukan jawaban?</b> (boleh lebih dari satu)</p>'+["Menggarisbawahi informasi penting","Membaca ulang teks","Bertanya kepada teman","Menonton video menenun ulos","Bermain game"].map(function(o){return'<label class="opt"><input type="checkbox" name="r2" value="'+o+'"><span>'+o+'</span></label>'}).join("")+'<p><b>3. Informasi apa yang paling kamu ingat tentang ulos?</b></p><input type="text" id="r3"><p><b>4. Aku akan melestarikan budaya dengan cara ...</b></p><input type="text" id="r4"><p><b>5. Langkah belajar berikutnya yang akan kupilih:</b></p>'+["Membaca ulang bagian teks yang ditunjuk umpan balik","Bertanya kepada teman atau guru","Mengulang soal yang masih keliru"].map(function(o){return'<label class="opt"><input type="radio" name="r5" value="'+o+'"><span>'+o+'</span></label>'}).join("")+'<button class="pri" id="fin" disabled>Lihat hasilku</button></section>';
+var ok=function(){$("#fin").disabled=!(document.querySelector("input[name=r1]:checked")&&document.querySelector("input[name=r5]:checked"))};
+document.querySelectorAll("input").forEach(function(e){e.addEventListener("change",ok)});
+$("#fin").onclick=function(){var g=function(n){var e=document.querySelector("input[name="+n+"]:checked");return e?e.value:""};
+S.ref={r1:g("r1"),r2:[].map.call(document.querySelectorAll("input[name=r2]:checked"),function(e){return e.value}).join(", "),r3:$("#r3").value.trim(),r4:$("#r4").value.trim(),r5:g("r5")};hasil()};
+}
+
+function hasil(){
+var f=0,a=0;S.rec.forEach(function(r){f+=r.first;a+=r.fin});
+var nf=Math.round(f/19*100),na=Math.round(a/19*100);
+var kat=function(n){return n>=86?["Sangat Baik","Tuntas"]:n>=70?["Baik","Tuntas"]:n>=41?["Cukup","Belum tuntas"]:["Kurang","Belum tuntas"]};
+var k=kat(na),tl=na<70?"Remedial: baca ulang teks bersama gurumu dengan bantuan gambar dan kata kunci, lalu ulangi soal yang keliru.":na<=85?"Penguatan: ulangi soal yang pada percobaan pertama masih keliru.":"Pengayaan: kerjakan soal HOTS, baca teks budaya daerah lain, dan jadilah tutor sebaya.";
+var ulang=[];Q.forEach(function(x,i){if(S.rec[i].first<(x.t=="ur"?4:x.pts))ulang.push("Soal "+(i+1)+" (paragraf "+x.par+")")});
+var rows=Q.map(function(x,i){var r=S.rec[i],m=x.t=="ur"?4:x.pts;return'<tr><td>'+(i+1)+'</td><td>'+r.first+' dari '+m+'</td><td>'+r.fin+' dari '+m+'</td></tr>'}).join("");
+app.innerHTML=bar(11)+'<h1>Hasilmu, '+esc(S.nama)+'</h1><section class="card"><p class="mut">Nilai setelah perbaikan</p><p class="big">'+na+'</p><p><b>'+k[0]+'</b>, '+k[1]+'. Nilai percobaan pertama: '+nf+'.</p><p>'+tl+'</p>'+(ulang.length?'<p>Yang perlu kamu baca ulang: '+ulang.join(", ")+'.</p>':'<p>Hebat, semua soal tepat pada percobaan pertama!</p>')+'<p class="mut">Nilai uraian berasal dari penilaian dirimu dan akan diperiksa ulang oleh gurumu.</p></section><section class="card"><h2>Rincian skor</h2><table><tr><th>Soal</th><th>Percobaan pertama</th><th>Setelah perbaikan</th></tr>'+rows+'</table></section><section class="card"><h2>Refleksimu</h2><p>Pemahaman: '+esc(S.ref.r1)+'</p><p>Cara yang membantu: '+esc(S.ref.r2||"-")+'</p><p>Paling kuingat: '+esc(S.ref.r3||"-")+'</p><p>Aku akan melestarikan budaya dengan: '+esc(S.ref.r4||"-")+'</p><p>Langkah berikutnya: '+esc(S.ref.r5)+'</p></section><button class="pri" id="cp">Salin hasilku untuk guru</button><button class="sec" id="rs">Kerjakan ulang</button><p id="cm" class="mut" aria-live="polite"></p>';
+$("#rs").onclick=function(){S.rec=Q.map(function(){return{a:0,first:0,fin:0,done:0,txt:""}});S.i=0;intro()};
+$("#cp").onclick=function(){var t="Asesmen Digital Ulos - "+S.nama+" ("+S.kelas+")\nNilai awal: "+nf+"; nilai setelah perbaikan: "+na+" ("+k[0]+", "+k[1]+")\n"+Q.map(function(x,i){return(i+1)+". "+(S.rec[i].txt||"-").replace(/\n/g," ")+" [skor "+S.rec[i].first+"/"+S.rec[i].fin+"]"}).join("\n")+"\nRefleksi: "+[S.ref.r1,S.ref.r2,S.ref.r3,S.ref.r4,S.ref.r5].join(" | ");
+try{navigator.clipboard.writeText(t).then(function(){$("#cm").textContent="Hasil sudah disalin. Tempel ke pesan untuk gurumu."},function(){$("#cm").textContent="Gagal menyalin. Foto layar ini dan kirim ke gurumu."})}catch(e){$("#cm").textContent="Gagal menyalin. Foto layar ini dan kirim ke gurumu."}};
+window.scrollTo(0,0);
+}
+intro();
+</script>
+</body>
+</html>
